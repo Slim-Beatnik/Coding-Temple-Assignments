@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Import fonts from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- Use external stylesheet -->
+    <link rel="stylesheet" href="../assets/comicon-style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        //Load home into div w/ content id upon page load
+        $(document).ready(function() {
+            $('#content').load(url = 'home.html');
+        });
+        
+       function swapContentPage(url) {
+        // fetch and get response (works like ready as long as files exist)
+            fetch(url)
+                .then(response => response.text())
+                .then(fetchedUrlContent => {
+                    // swap new page into the content div
+                    document.getElementById('content').innerHTML = fetchedUrlContent;
+            });
+       }
+    </script>
+</head>
+<body>
+    <div class="superContainer">
+        <header>
+            <div class="headerDisplayContainer">
+                <!-- onClick show navLinks transform: scaleY divOrder -->
+                <!-- <div class="navBar">
+                    <img class="logo" src="../assets/navBars1.png" alt="&#x2630;">
+                </div> -->
+                <div class="navLinks">
+                  <ul>
+                    <li><button id="internalLink" onclick="swapContentPage('home.html')">Home</button></li>
+                    <li><button id="internalLink" onclick="swapContentPage('events.html')">Events</button></li>
+                    <li><button id="internalLink" onclick="swapContentPage('location.html')">Locations</button></li>             
+                    <li><button id="internalLink" onclick="swapContentPage('menu.html')">Menu</button></li>
+                    <li><button id="internalLink" onclick="swapContentPage('contact.html')">Contact Us</button></li>
+                  </ul>
+                </div>
+                <div class="icon">
+                    <img class="logo" src="../assets/SLIM comicon.png" alt="Stan Lee In Memoriam Comicon logo">
+                </div>
+            </div>
+        </header>
+    <div id="content"></div>
+    <footer>&#128376; &#x1F12F; Kyle Hill 2025</footer>
+  </div>
+</body>
+</html>
