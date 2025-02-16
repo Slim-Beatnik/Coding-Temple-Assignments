@@ -8,7 +8,12 @@
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-
+        <!-- popper above bootstrap should keep it from breaking -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
         <!-- Bootstrap CSS v5.2.1 -->
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -16,17 +21,95 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- jQuery CDN -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Wait for page to load before making popover display html code -->
+        <script>
+            $(document).ready(function () {
+                $('#legalDocLinks').popover( { html: true } );
+            });
+        </script>
     </head>
 
-    <body>
-    <div class="container align-content-md-around flex-sm-fill" id="superContainer" style="width: 95%;">
+    <body style="background-image: url('assets/img/pinkGradient.png');">
+    <div class="container align-content-around flex-lg-fill" id="superContainer" style="width: 95%;">
         <header>
-            <!-- place navbar here -->
+            <!-- fixed medium and large+ screen navbar -- menu collapsed on start -- only expanded on extra large screens -->
+            <nav class="navbar navbar-expand-xl navbar-dark bg-dark d-md-flex d-lg-flex d-sm-none d-none fixed-top" id="mdLgScreenNavbar">
+                <div class="container-fluid">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo3"
+                        aria-controls="navbarTogglerDemo3"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon flex-shrink-0"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <div class="navbar-collapse collapse " id="navbarTogglerDemo3">
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Your Mom</a>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            <!-- only appears on small screens w/ righthanded mobile users in mind -- menu collapsed on start -->
+            <div class="container cond-lg-none d-md-none d-sm-block" id="smallScreenNavbar">
+                <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo2"
+                            aria-controls="navbarTogglerDemo2"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                        >
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo2">
+                            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Your Mom</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
         <main>
-
             <div class="div" class="container d-grid" id="formContainer">
-                <form class="needs-validation form-control-sm" id="signUpForm" action="/submit" method="POST" novalidate>
+                <form class="needs-validation form-control-sm was-validated bg-dark-subtle p-5" id="signUpForm" action="#sign_up.php" method="post:" novalidate>
                     <div class="input-group mb-3 p-1 row align-self-center" id="nameGroup">
                         <div class="input-group input-group-text bg-info-subtle p-1 d-sm-inline-flex align-self-center">
                             <label class="flex-grow-0 text-center mx-3 initialism" id="basic-addon1" for="inputFirstName">First:</label>
@@ -59,6 +142,7 @@
                     <div class="input-group mb-3 p-1 row align-self-center" id="emailGroup">
                         <div class="input-group input-group-text bg-info-subtle p-1 d-sm-inline-flex align-self-center">
                             <label class="flex-grow-0 text-center mx-3 initialism" id="basic-addon3" for="inputEmail">Email:</label>
+                            <!-- opens email keyboard on mobile devices -->
                             <input 
                                 type="email"
                                 class="form-control flex-grow-1 rounded-start-2"
@@ -78,8 +162,9 @@
                     <div class="input-group mb-3 p-1 row align-self-center" id="passwordGroup">
                         <div class="input-group input-group-text bg-info-subtle p-1 d-sm-inline-flex align-self-center">
                             <label class="flex-grow-0 text-center mx-3 initialism" id="basic-addon4">Choose a password:</label>
+                            <!-- type password hides input -->
                             <input 
-                                type="text"
+                                type="password"
                                 class="form-control flex-grow-1"
                                 name="email"
                                 id="inputEmail"
@@ -91,67 +176,136 @@
                         </div>
                     </div>
                     <fieldset class="mb-3 row">
-                        
-                            <div class="row  align-items-center align-content-center">
-                                <input type="checkbox" class="form-check" name="inputAgreement" id="agreement" required>
-                                <label class="text-justify" for="inputAgreement">
+                            <div class="col d-block">
+                                <!-- additional js needed to validate checkbox -->
+                                <input type="checkbox" class="form-check row" name="inputAgreement" id="agreement" required>
+                                <label class="text-justify row" for="inputAgreement">
                                     *By checking this box you confirm you have read and agree to the EULA and terms of use.
                                 </label>
-                                
+                                <!-- js scripts up top to initialize popover + force hmtl format w/i popover card -->
                                 <a
                                     tabindex="0"
-                                    class="btn btn-info popover-dismiss"
+                                    class="btn btn-info popover-dismiss row"
                                     role="button"
                                     data-bs-toggle="popover"
                                     data-bs-trigger="focus"
-                                    title="Document Links"
+                                    title="Documents"
                                     data-bs-placement="top"
-                                    data-bs-content="something"
-                                    data-bs-original-title="Dismissible popover"
+                                    data-bs-content="
+                                        <h1> 63 + 57:</h1>
+                                        <h2>Europium + Lanthanum</h2>
+                                        <a href='itDoesntMatter.com'>Here's a link you can't hit in a dismissable popover</a>
+                                        
+                                        <h1>Terms:</h1>
+                                        <h2>We own you now</h2>
+                                    "
+                                    data-bs-original-title="Click to Read"
+                                    data-bs-popover="html"
                                     id="legalDocLinks"
+                                    html
                                 >
                                     See EULA and Terms of Use
-                                </a>
-                                
-                                    
-<script>
-    $('#legalDocLinks').popover('hide');
-    $('#legalDocLinks').click(function(){
-        $('#legalDocLinks').popover('show');
-    });
-</script>
-                                </button>
-                                
+                                </a> 
                             </div>
-                            
                     </fieldset>
-                    <div class="mb-3 row">
-                        <div class="offset-sm-4 col-sm-8">
-                            <button type="submit" class="btn btn-primary">
-                                Action
+                    <div class="max-w-max mb-3 row align-items-center">
+                        <div class="offset-sm-5 align-items-center col">
+                            <button type="submit" class="btn btn-success" for="signUpForm">
+                                Sign Up!
                             </button>
                         </div>
                     </div>
                 </form>
             </div>
-            
+            <br>
+            <br>
+            <div class="container table-responsive" id="tableContainer">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <h2>Other Users' Data</h2>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>R2D2</td>
+                            <td>notTheDroidsURLooking@four.com</td>
+                            <td>Just</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>C3P0</td>
+                            <td>combat-3_power-0@swdnd.com</td>
+                            <td>Kidding</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>JeffGoldblum</td>
+                            <td>theJG1952@fly.net</td>
+                            <td>We</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>BobertAnglostein</td>
+                            <td>ba.gmail.com</td>
+                            <td>Wouldn't</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>AeslinMazza</td>
+                            <td>irreverentPrincess21@yahoo.com</td>
+                            <td>Share</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>RevelMazza</td>
+                            <td>coolGuy7481@gmail.com</td>
+                            <td>Any</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <!-- a remarkably terrible character from a
+                             remarkably terrible book foisted upon me by
+                             US education system -->
+                            <td>HoldenCaulfield</td>
+                            <td>catcher@theRye.gov</td>
+                            <td>iLikeBloodRunningDownMyFace!*bigMan1951</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <div class="container col">
+                <div class="container d-flex row">
+                    <img class="img-fluid flex-fill" src="/assets/img/monkey.png">
+                </div>
+                <div class="container py-5 row align-items-centercenter">    
+                    <img class="rounded-circle" style="min-width:10%; max-width: 20%;" src="/assets/img/monkey.png">
+                </div>
+                <button class="btn btn-dark btn-lg">
+                    <a href="https://www.youtube.com/watch?v=cHa81UKTamk">This is a song that's as loud as it is silly.</a>
+                </button>
+                <button type="button" class="btn d-none btn-outline-dark d-md-inline">
+                    <a
+                        href="https://petapixel.com/2015/05/24/365-gigapixel-panorama-of-mont-blanc-becomes-the-worlds-largest-photo/"
+                        alt="story about the worlds current-most largest image - 2/16/25"
+                    >This is story about an image too big for small screens</a>
+                </button>
+            </div>
+            <br>
 
         </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
+        <div class="container py-52 my-52 bg-dark-subtle d-block">
+            <footer>
+                <h3>Footer, I don't even know 'er'</h3>
+            </footer>
+        </div>
     </div>
     </body>
 </html>

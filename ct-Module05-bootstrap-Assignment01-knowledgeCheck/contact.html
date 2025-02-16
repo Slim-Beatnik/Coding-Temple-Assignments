@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> <!-- jQuery CDN -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    <title>Contact</title>
+</head>
+<body class="bg-body-secondary">
+    <div class="container col container-fluid bg-danger-subtle" id="superContainer">
+        <div class="container row" id="headerContainer">
+        <header>
+        <!-- fixed medium and large+ screen navbar -- menu collapsed on start -- only expanded on extra large screens -->
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark d-md-flex d-lg-flex d-sm-none d-none fixed-top" id="mdLgScreenNavbar">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo3"
+                    aria-controls="navbarTogglerDemo3"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon flex-shrink-0"></span>
+              </button>
+              <a class="navbar-brand" href="#">Navbar</a>
+              <div class="navbar-collapse collapse " id="navbarTogglerDemo3">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Your Mom</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <!-- only appears on small screens w/ righthanded mobile users in mind -- menu collapsed on start -->
+        <div class="container cond-lg-none d-md-none d-sm-block" id="smallScreenNavbar">
+            <nav class="navbar navbar-expand-xl bg-dark navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo2"
+                        aria-controls="navbarTogglerDemo2"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo2">
+                        <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="" tabindex="-1" aria-disabled="true">Your Mom</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    </div>
+    <div class="container row" id="mainContainer">
+        <main>
+            <div class="bg-dark-subtle p-5">
+                <form class="" method="post:" id="contact_form">
+                    <h1>Contact Us</h1>
+                    <h2>Please tell us about yourself:</h2>
+                    <label for="name">Name:</label>
+                    <!-- Dr. Jonathan "Jon" Osterman is Dr. Manhattan-->
+                    <input type="text" id="name" name="name" placeholder="Some guy named Jeff" required>
+                    <br>
+    
+                    <label for="email">Where can we reach you?</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                    <br>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea id="message" name="message" placeholder="...The purpose of art is outlet not output..." rows="7" cols="60" required></textarea>
+                    <br>
+                    <h2>Where did you hear about us?</h2>
+                    <input type="radio" id="f_onGoogle" name="found" value="f_onGoogle">
+                    <label for="f_onGoogle">Google</label>
+                    <input type="radio" id="f_onFacebook" name="found" value="f_onFacebook">
+                    <label for="f_onFacebook">FaceBook</label>
+                    <input type="radio" id="f_onOther" name="found" value="f_onOther">
+                    <label for="f_onOther">Other</label>
+                    <input type="text" id="f_onOther" name="found" value="&#x1F588; Elsewhere?...">
+                </form>
+                <button type="submit" form="contact_form" value="Submit">Submit</button>
+            </div>
+        </main>
+
+    </div>
+</div>
+</body>
+</html>
