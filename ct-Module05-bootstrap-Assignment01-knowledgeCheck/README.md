@@ -286,7 +286,7 @@ classes. This includes bs5 css.</p>
 <!-- GETTING STARTED -->
 ## Getting Started
 
-fetch project files or visit this <a href="kh-ct-module05-assignment01.netlify.app"></a>link</a>.
+fetch project files or visit this <a href="kh-ct-module05-assignment01.netlify.app">link</a>.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
