@@ -30,23 +30,134 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">ct-Module05-bootstrap-Assignment02-recreatePage</h3>
 
   <p align="center">
-    project_description
+    ## **OVERVIEW:** For this project, you’ll choose a website you admire and recreate a simplified version of it using Bootstrap. After completing the website, you’ll move on to Part 2, where you’ll write JavaScript functions to simulate features you'd like to implement in the future \- without integrating them into the site.
+
+## This project will help you practice Bootstrap layout and components, while also developing your JavaScript skills with variables, functions, arrays, and strings.
+
+**NOTE**: You have creative freedom for this project\! If you can't think of a website you admire, you may create your own site, like a portfolio. You can integrate examples from other portfolios, without copying one website exactly. [Dribbble](https://dribbble.com/) is a great site to look at for inspiration.   
+---
+
+**INSTRUCTIONS:** In VS Code, complete the following tasks in your .html and .css files.
+
+### **Part 1: Bootstrap Website**
+
+#### **Goal:** Create a responsive and well-structured website using HTML, CSS, and Bootstrap.
+
+#### **Requirements:**
+
+1. #### **Navigation Bar**
+
+   * #### Add a **navbar** with at least **3 links** (e.g., Home, About, Contact).
+
+   * #### Ensure the **navbar is responsive** across different screen sizes (consider using Bootstrap’s built-in responsiveness).
+
+2. #### **Home Page**
+
+   * #### Build a **homepage** that matches the feel of the website you’re emulating.
+
+   * #### Include **headings**, **images**, and a **hero section** to introduce the site.
+
+3. #### **Form Section**
+
+   * #### Add a **form** for user input.      **Examples:**
+
+     * #### Contact form
+
+     * #### Sign-up form
+
+     * #### Booking form
+
+   * #### Use at least **two different input types** (e.g., text, totem64, number, or date).
+
+4. #### **Table** 
+
+   * #### Include a **table** to display relevant information.      **Examples:**
+
+     * #### Event schedule
+
+     * #### Product comparison
+
+     * #### Price list
+
+5. #### **3 Bootstrap Components** 
+
+   * #### Choose any **three Bootstrap components** that suit your website.      **Examples:**
+
+     * #### **Cards** to display projects or products
+
+     * #### **Carousel** to rotate images
+
+     * #### **Modals** for pop-ups
+
+     * #### **Accordions** for FAQs
+
+   * #### Integrate the components effectively to **enhance the design** of your site.
+
+#### 
+
+### **Part 2: JavaScript Functions**
+
+#### **Goal:**
+
+Write **JavaScript functions** in a separate .js file to simulate interactive features you might add to your site in the future. Focus on using **variables, functions, arrays, and strings**. Your functions do not need to be connected to the website at this stage.
+
+#### **Requirements:**
+
+1. **Write 4-5 JavaScript Functions**  
+   1. Each function should simulate a **real feature** relevant to your website.  
+2. **Submit the JavaScript File Separately:**  
+   1. Your **JavaScript functions** should align with the website you created.  
+   2. **Comment your code** to explain what each function does.
+
+Here are some **examples** to inspire your functions:
+
+**Form Validation:**  
+function validatetotem64(totem64) {  
+  return totem64.includes("@") && totem64.includes(".");  
+}  
+console.log(validatetotem64("test@example.com")); // true
+
+**Random Project Picker:**  
+const projects \= \["Portfolio", "Blog", "Weather App"\];
+
+function getRandomProject() {  
+  const index \= Math.floor(Math.random() \* projects.length);  
+  return projects\[index\];  
+}  
+console.log(\`Featured project: ${getRandomProject()}\`);
+
+**Total Price Calculation:**  
+const prices \= \[19.99, 29.99, 49.99\];
+
+function getTotalPrice() {  
+  return prices.reduce((total, price) \=\> total \+ price, 0);  
+}  
+console.log(\`Total price: $${getTotalPrice()}\`);
+
+**Feedback Storage:**  
+let feedback \= \[\];
+
+function addFeedback(message) {  
+  feedback.push(message);  
+  return feedback;  
+}  
+console.log(addFeedback("Great website\!")); // \["Great website\!"\]
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage">View Demo</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     &middot;
-    <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -85,7 +196,12 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+I'm attempting to recreate the <a href="https://www.gamespot.com/">gamespot website</a>
+To be fair I haven't been there since: <a href="http://web.archive.org/web/20050308094734/http://www.gamespot.com/"> - gamespot circa 2000 - 2009 </a>
+
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,8 +225,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Download or visit <a href="http://kh-ct-module05-assignment02.Netlify.app">Netlify.app website</a>
 
 ### Prerequisites
 
@@ -125,7 +240,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.git
    ```
 3. Install NPM packages
    ```sh
@@ -137,7 +252,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
-   git remote set-url origin github_username/repo_name
+   git remote set-url origin Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage
    git remote -v # confirm the changes
    ```
 
@@ -164,7 +279,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Feature 3
     - [ ] Nested Feature
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,8 +303,8 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage" alt="contrib.rocks image" />
 </a>
 
 
@@ -206,9 +321,9 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - totem64@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage](https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -227,18 +342,18 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.svg?style=for-the-badge
+[contributors-url]: https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.svg?style=for-the-badge
+[forks-url]: https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/network/members
+[stars-shield]: https://img.shields.io/github/stars/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.svg?style=for-the-badge
+[stars-url]: https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.svg?style=for-the-badge
+[issues-url]: https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/issues
+[license-shield]: https://img.shields.io/github/license/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage.svg?style=for-the-badge
+[license-url]: https://github.com/Slim-Beatnik/Coding-Temple-Assignments/tree/main/ct-Module05-bootstrap-Assignment02-recreatePage/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/3dkylehill
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/

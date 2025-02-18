@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
-    <>
-        <title>Title</title>
+    <head>
+        <!-- gamepost log svg saved as favicon type image/svg+xml required -->
+        <link rel="icon" href="assets/img/favicon.svg" sizes="any" type="image/svg+xml">
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -16,6 +17,8 @@
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+
+        <link rel="stylesheet" href="assets/css/remakeGamespot.css">
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -29,16 +32,69 @@
             crossorigin="anonymous"
         ></script>
         <!-- /bs js lib -->
+         <title></title>
     </head>
-
+    
+    <!-- gamespot vector logo
+    <svg width="731.79" height="731.81" viewBox="0 0 731.79 731.81" aria-hidden="true" class="symbol symbol-logo-outline-circle">
+        <path d="M365.89 0C163.81 0 0 163.83 0 365.91s163.81 365.9 365.89 365.9 365.9-163.81 365.9-365.9S568 0 365.89 0Zm0 684.24c-175.81 0-318.33-142.53-318.33-318.33S190.08 47.58 365.89 47.58 684.23 190.1 684.23 365.91 541.71 684.24 365.89 684.24Z"/>
+        <path d="M508.25 506.5c-8.35-5.84-19.41-8.42-31.6-8.42-9.51 0-33.75 3.88-71.5 11.7-19.88 4.27-35.17 5.61-46.07 5.61-43.63 0-80.47-14.35-112.21-43.36-30.26-29.3-46.21-64.56-46.21-105.9 0-42.29 14.94-77.74 46-106.05 31.92-29.35 72.16-43.65 121.16-43.65 32.09 0 57.48 2.21 78.49 7.5 3.24.65 19.22 5.84 47.56 16.19l-11.58 44.3c-14.15-5.81-24.73-9.14-32.43-10.73a169.56 169.56 0 0 0-46.22-6.16c-31.92 0-56.85 10.13-75.72 30.29-17.42 18.52-25.53 41.72-25.53 68.73 0 26.67 7.79 48.47 23.74 66.42 16.17 18.15 35.2 26.03 57.16 26.03 8.48 0 16-1.34 21.83-6.58a27.1 27.1 0 0 0 9-20.83v-60.52h94.15Z"/>
+    </svg> -->
+    
     <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        
+        <div id="superContainer"></div>
+            <header class="row d-lg-flex">
+                <div class="col-auto" id="navHighlightedLinks">
+                        <span class="col">
+                            <a href="#" data-click-tag="tracking|header|content">Highlighted Article 01</a>
+                        </span>
+                        <span class="col" data-click-tag="tracking|header|content">
+                            <a href="#">Highlighted Article 02</a>
+                        </span>
+                        <span class="col" data-click-tag="tracking|header|content">
+                            <a href="#">Highlighted Article 03</a>
+                        </span>
+                        <span class="col" data-click-tag="tracking|header|content">
+                            <a href="#">Highlighted Article 04</a>
+                        </span>
+                        <span class="col" data-click-tag="tracking|header|content">
+                            <a href="#">Highlighted Article 05</a>
+                        </span>
+                        <span class="col" data-click-tag="tracking|header|content">
+                            <a href="#">Highlighted Article 06</a>
+                        </span>
+                    </div>
+                    <div class="nav navbar-brand navbar-collapse">
+                        <div class="flex-wrap row d-block">
+                            <div class="masthead-nav-section">
+                                <button class="js-masthead-toggle masthead-toggle masthead-toggle-nav masthead-tappable masthead-hspace-r--tappable flexbox-inline-flex flexbox-justify-center flexbox-align-center no-button-styles" data-toggle="nav" type="button" aria-label="Toggle Site Navigation">
+                                    <i class="masthead-toggle-nav-open">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true" class="symbol symbol-menu">
+                                            <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
+                                        </svg>
+                                    </i>
+                                    <i class="masthead-toggle-close masthead-toggle-nav-close">
+                                        <svg width="80" height="80" viewBox="0 0 80 80" aria-hidden="true" class="symbol symbol-close">
+                                            <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
+                                        </svg>
+                                    </i>
+                                </button>
+                            </div>
+                            <div class="masthead-nav-section">
+                                <div class="masthead-logo flexbox-justify-center">
+                                    <a class="masthead-logo-link masthead-tappable flexbox-inline-flex flexbox-justify-center" href="/" title="GameSpot">
+                                        <i class="masthead-logo-asset inline-block masthead-logo-asset-compact ">
+                                            
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="masthead-nav-section masthead-user-nav flexbox-justify-flex-end">
+                                <div class="masthead-nav-item masthead-user-nav-item height-100  masthead-hspace-l--tappable">
+                                    <div class="masthead-nav-item-wrap base-flexbox">
+                                        <a href="/login-signup/" class="masthead-nav-item-label masthead-user-nav-item-label masthead-tappable flexbox-align-center flexbox-justify-center" title="Login / Sign Up" aria-label="Login or Sign Up">
+
+                                        </a>
+        </div>
     </body>
 </html>
