@@ -10,4 +10,4 @@ What I got from it:
 4.	loading html files into a div will still show the correct title on the webBrowser if you remove the title tags from the main page
 
 Hosted on:
-tiny-belekoy-5e0e64.netlify.app
+kh-ct-module04-assignment02.netlify.app
