@@ -55,12 +55,12 @@
 
     <!-- gamespot menu button
     <button class=" d-inline-block justify-center align-items-center" id="navToggle" data-toggle="navToggle" type="button" aria-label="Toggle Site Navigation">
-        <i class="nav navbar-toggler-icon">
+        <i class="nav ">
             <svg width="80px" height="80px" viewBox="0 0 80 80" class="" id="navToggleOpen">
                 <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
             </svg>
         </i>
-        <i class="nav navbar-toggler-icon d-none" id="navToggleClose">
+        <i class="nav  d-none" id="navToggleClose">
             <svg width="80" height="80" viewBox="0 0 80 80" class="symbol symbol-close">
                 <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
             </svg>
@@ -68,56 +68,79 @@
     </button> -->
     
 <body class="roboto">
-<div id="superContainer d-block col"></div>
-    <header class="row d-flex ps-3">
-        <div class="col-auto font-thin border-bottom border-0 py-3" id="navHighlightedLinks">
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 01</a>
-            </span>
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 02</a>
-            </span>
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 03</a>
-            </span>
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 04</a>
-            </span>
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 05</a>
-            </span>
-            <span class="col">
-                <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 06</a>
-            </span>
-        </div>
-        <div class="flex-wrap row d-block">    
-            <div class="nav navbar-brand navbar-collapse pt-15px">
-                <div class="container-fluid d-md-none d-lg-none col" id="toggleIconContainer">
-                    <button class="btn bg-transparent justify-start w-8 h-8"
-                        data-toggle="navToggle"
-                        type="button"
-                        aria-label="Toggle Site Navigation"
-                        onclick="swapVisById('\#navToggle')"
-                    >
-                        <i class="nav navbar-toggler-icon d-lg-none" id="navToggle">
-                            <!-- svg snagged from gamespot.com -->
-                            <svg width="70%" height="70%" viewBox="0 0 80 80">
-                                <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
-                            </svg>
-                        </i>
-                        <i class="nav navbar-toggler-icon d-lg-none" id="navToggle" hidden>
-                            <svg width="70%" height="70%" viewBox="0 0 80 80" fill="#de004a">
-                                <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
-                            </svg>
-                        </i>
-                </div>     
+<div class="d-block col" id="superContainer">
+    <div class="container-fluid row d-grid" id="headerContainer" style="height: 8.216rem;">
+        <header class="row container-fluid ps-3">
+            <div class="position-absolute font-thin border-bottom border-0 mb-8 overflow-x-scroll" id="navHighlightedLinks">
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 01</a>
+                </span>
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 02</a>
+                </span>
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 03</a>
+                </span>
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 04</a>
+                </span>
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 05</a>
+                </span>
+                <span class="col">
+                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 06</a>
+                </span>
+            </div>
+            <div class="container-fluid row" id="absSpacer"></div>
+            <script>
+                setSpacerHeight('absSpacer', 'navHighlightedLinks')
+            </script>
+                <div class="container-fluid d-inline-flex nav navbar row pt-15" style="max-width: 100vw;">
+                    <div class="container-fluid flex-row d-md-none d-lg-none col flex-grow-0 pe-5 me-2 align-content-center" id="toggleIconContainer" style="width: 56px; height: 48px;">
+                        <button class="btn bg-transparent justify-start flex-grow-0"
+                            data-toggle="navToggle"
+                            type="button"
+                            aria-label="Toggle Site Navigation"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            onclick="swapVisById('\#navToggle')"
+                        >
+                            <!-- hidden if size > sm -->
+                            <i class="nav d-sm-inline-block d-md-none d-lg-none" id="navToggle">
+                                <!-- svg snagged from gamespot.com -->
+                                <svg width="16" height="16" viewBox="0 0 80 80" fill="#262626">
+                                    <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
+                                </svg>
+                            </i>
+                            <!-- not hidden based on size in case screen maximized while viewing dropdown -->
+                            <i class="nav " id="navToggle" hidden>
+                                <svg width="16" height="16" viewBox="0 0 80 80" fill="#de004a">
+                                    <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
+                                </svg>
+                            </i>
+                        </button>
+                    </div>
                 
-                
-                
-                
-        </div>
-    </header>
-    <div class="container container-fluid" id="mainContent">
+                    <div class="nav navbar-brand flex-grow-0 justify-content-center col flex-grow-0 ps-2" id="gsLogo">
+                        <svg width="30" height="30" viewBox="0 0 731.79 731.81" class="symbol symbol-logo-outline-circle" id="gsLogo" fill="#262626">
+                            <path d="M365.89 0C163.81 0 0 163.83 0 365.91s163.81 365.9 365.89 365.9 365.9-163.81 365.9-365.9S568 0 365.89 0Zm0 684.24c-175.81 0-318.33-142.53-318.33-318.33S190.08 47.58 365.89 47.58 684.23 190.1 684.23 365.91 541.71 684.24 365.89 684.24Z"/>
+                            <path d="M508.25 506.5c-8.35-5.84-19.41-8.42-31.6-8.42-9.51 0-33.75 3.88-71.5 11.7-19.88 4.27-35.17 5.61-46.07 5.61-43.63 0-80.47-14.35-112.21-43.36-30.26-29.3-46.21-64.56-46.21-105.9 0-42.29 14.94-77.74 46-106.05 31.92-29.35 72.16-43.65 121.16-43.65 32.09 0 57.48 2.21 78.49 7.5 3.24.65 19.22 5.84 47.56 16.19l-11.58 44.3c-14.15-5.81-24.73-9.14-32.43-10.73a169.56 169.56 0 0 0-46.22-6.16c-31.92 0-56.85 10.13-75.72 30.29-17.42 18.52-25.53 41.72-25.53 68.73 0 26.67 7.79 48.47 23.74 66.42 16.17 18.15 35.2 26.03 57.16 26.03 8.48 0 16-1.34 21.83-6.58a27.1 27.1 0 0 0 9-20.83v-60.52h94.15Z"/>
+                        </svg>
+                    </div>    
+                    <div class="container-inline-flex flex-grow-1 col float-end" id="signInContainer">
+                        <div class="row float-end">
+                            <a href="signup.html">
+                                <svg width="16" height="16" viewBox="0 0 22 28" aria-hidden="true" fill="#262626">
+                                    <path d="M22 21.953q0 1.875-1.141 2.961T17.828 26H4.172q-1.891 0-3.031-1.086T0 21.953q0-.828.055-1.617t.219-1.703.414-1.695.672-1.523.969-1.266 1.336-.836T5.407 13q.141 0 .656.336t1.164.75 1.687.75 2.086.336 2.086-.336 1.687-.75 1.164-.75.656-.336q.953 0 1.742.313t1.336.836.969 1.266.672 1.523.414 1.695.219 1.703.055 1.617zM17 8q0 2.484-1.758 4.242T11 14t-4.242-1.758T5 8t1.758-4.242T11 2t4.242 1.758T17 8z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                </div>    
+            </div>
+        </header>
+    </div>
+    <div class="container container-fluid h-100 justify-content-center" id="mainContent">
         <main>
             <div class="container-fluid flex-sm-wrap" id="topArticles">
                 <div class="m-md-0 m-2 flex-lg-grow-1" id="article1">

@@ -7,40 +7,41 @@ html {
     font-family: "Roboto", serif !important;
     font-optical-sizing: auto;
     font-style: normal;
+    font-size: 1rem;
+    line-height: 1.222;
+}
+
+#headerContainer {
+    min-width: 100vw;
 }
 
  /* top links */
 #navHighlightedLinks {
+    padding: 20px 15px 20px 15px;
     text-wrap-mode: nowrap;
+    overflow-x: scroll;
+    scrollbar-width: none;
 }
 
+/* spans with parent matching parent id except last, put a | after */
 #navHighlightedLinks span:not(:last-child)::after {
     content: '|';
-    font-size: x-small;
-    font-weight: lighter !important;
+    font-size: x-small !important;
+    font-weight: lighter;
     color: #666;
     padding-left: 5px;
     padding-right: 5px;
 }
 
 #navHighlightedLinks a {
-    
-    font-size: x-small;
+    font-size: xx-small !important;
 }
 
-#navToggleOpen {
-    fill: #262626 !important;
-    visibility: visible !important;
-}
 
-#navToggleClose {
-    fill: #de004a;
-    visibility: hidden !important;
-}
-
- /* link colors */
+/* link colors */
 a {
-    color: #666;
+    stroke-opacity: none;
+    color: inherit;
 }
 
 a:hover {
@@ -49,4 +50,12 @@ a:hover {
 
 [hidden] {
     display: none;
+}
+
+#absSpacer {
+    width: 100%;
+}
+
+#signInContainer {
+    min-width: calc()
 }

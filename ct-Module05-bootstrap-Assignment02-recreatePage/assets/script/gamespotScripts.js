@@ -8,5 +8,12 @@ function swapVisById(elId) {
     // in html, escape css id name -- '#elId' looks like '\#elId'
     const els = document.querySelectorAll(elId);
     els.forEach((el) => el.hidden = !el.hidden);
-    console.log(els, els.hidden);
 }
+
+// copy height from absolute div and apply it to spacer div
+function setSpacerHeight(spacerId, idToMatchHeight) {
+    const spacer = document.getElementById(spacerId);
+    const heightToMatch = document.getElementById(idToMatchHeight).offsetHeight;
+    spacer.style.height = heightToMatch + 'px';
+}
+
