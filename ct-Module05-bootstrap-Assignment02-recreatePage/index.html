@@ -36,99 +36,134 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"
     ></script>
+    <!-- load jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- load style -->
     <link rel="stylesheet" href="assets/css/gamespotStyle.css" />
+    <!-- load js -->
     <script src="assets/script/gamespotScripts.js"></script>
-        <title></title>
-</head>
-    
-    <!-- gamespot vector logo
-    <svg width="731.79" height="731.81" viewBox="0 0 731.79 731.81" class="symbol symbol-logo-outline-circle">
-        <path d="M365.89 0C163.81 0 0 163.83 0 365.91s163.81 365.9 365.89 365.9 365.9-163.81 365.9-365.9S568 0 365.89 0Zm0 684.24c-175.81 0-318.33-142.53-318.33-318.33S190.08 47.58 365.89 47.58 684.23 190.1 684.23 365.91 541.71 684.24 365.89 684.24Z"/>
-        <path d="M508.25 506.5c-8.35-5.84-19.41-8.42-31.6-8.42-9.51 0-33.75 3.88-71.5 11.7-19.88 4.27-35.17 5.61-46.07 5.61-43.63 0-80.47-14.35-112.21-43.36-30.26-29.3-46.21-64.56-46.21-105.9 0-42.29 14.94-77.74 46-106.05 31.92-29.35 72.16-43.65 121.16-43.65 32.09 0 57.48 2.21 78.49 7.5 3.24.65 19.22 5.84 47.56 16.19l-11.58 44.3c-14.15-5.81-24.73-9.14-32.43-10.73a169.56 169.56 0 0 0-46.22-6.16c-31.92 0-56.85 10.13-75.72 30.29-17.42 18.52-25.53 41.72-25.53 68.73 0 26.67 7.79 48.47 23.74 66.42 16.17 18.15 35.2 26.03 57.16 26.03 8.48 0 16-1.34 21.83-6.58a27.1 27.1 0 0 0 9-20.83v-60.52h94.15Z"/>
-    </svg> -->
+    <!-- needs jquery to be loaded 1st -->
+    <script>
+        //Load home into div w/ content id upon page load
+        $(document).ready(function() {
+            $('#mainContent').load('home.html');
+            // Run logoSizeUpdate immediately
+            logoSizeUpdate();
 
-     <!-- gamespot vector img-symbol
+            // Correctly add event listeners
+            window.addEventListener('resize', logoSizeUpdate);
+        });
+    </script>
+    <!-- intentionally left out <title>, loaded pages with will supplant the missing tag -->
+</head>
+
+<!-- gamespot vector img-symbol
     <svg width="24" height="19" viewBox="0 0 24 19" class="symbol symbol-image-variant">
         <path fill-rule="evenodd" d="M21.545 0c.527 0 .979.193 1.354.581.375.388.563.854.563 1.398v15.042a1.94 1.94 0 0 1-.563 1.398 1.815 1.815 0 0 1-1.354.581H2.378c-.527 0-.979-.193-1.354-.581a1.94 1.94 0 0 1-.562-1.398V1.979c0-.544.187-1.01.562-1.398A1.815 1.815 0 0 1 2.378 0h19.167Zm0 1.583H2.378a.36.36 0 0 0-.27.118.387.387 0 0 0-.114.278v12.658L7.36 9.5l1.916 1.98 6.134-6.334 6.518 6.285V1.979c0-.107-.039-.2-.114-.278a.36.36 0 0 0-.27-.118ZM8.128 5.542c0 .66-.223 1.22-.67 1.682-.448.462-.991.693-1.63.693-.64 0-1.182-.23-1.63-.693a2.328 2.328 0 0 1-.67-1.682c0-.66.223-1.221.67-1.683.448-.462.99-.693 1.63-.693.639 0 1.182.231 1.63.693.447.462.67 1.023.67 1.683Z">
         </path>
     </svg> -->
-
-    <!-- gamespot menu button
-    <button class=" d-inline-block justify-center align-items-center" id="navToggle" data-toggle="navToggle" type="button" aria-label="Toggle Site Navigation">
-        <i class="nav ">
-            <svg width="80px" height="80px" viewBox="0 0 80 80" class="" id="navToggleOpen">
-                <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
-            </svg>
-        </i>
-        <i class="nav  d-none" id="navToggleClose">
-            <svg width="80" height="80" viewBox="0 0 80 80" class="symbol symbol-close">
-                <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
-            </svg>
-        </i>
-    </button> -->
     
 <body class="roboto">
-<div class="d-block col" id="superContainer">
-    <div class="container-fluid row d-grid" id="headerContainer" style="height: 8.216rem;">
-        <header class="row container-fluid ps-3">
-            <div class="position-absolute font-thin border-bottom border-0 mb-8 overflow-x-scroll" id="navHighlightedLinks">
+<div class="d-flex align-items-center d-grid" id="superContainer">
+    <!-- height figured out through guess and check ~60px -->
+    <div class="flex-sm-fill px-0 ps-md-3 ps-lg-5" id="headerContainer" style="height: 8.216rem;">
+        <header class="">
+            <!-- position absolute to scroll on small screens, scrollbar width=0 to hide -->
+            <div class="position-fixed font-thin mb-8 overflow-x-scroll" id="navHighlightedLinks">
+                <!-- Placeholder links to show :hover color and underline transparency -->
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 01</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 01</a>
                 </span>
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 02</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 02</a>
                 </span>
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 03</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 03</a>
                 </span>
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 04</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 04</a>
                 </span>
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 05</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 05</a>
                 </span>
                 <span class="col">
-                    <a class="link-secondary link-underline link-underline-opacity-0" href="#">Highlighted Article 06</a>
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 06</a>
+                </span>
+                <span class="col">
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 07</a>
+                </span>
+                <span class="col">
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 08</a>
+                </span>
+                <span class="col">
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 09</a>
+                </span>
+                <span class="col">
+                    <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 10</a>
                 </span>
             </div>
-            <div class="container-fluid row" id="absSpacer"></div>
+            <!-- end navHighlightedLinks -->
+            <div id="topSpacer"></div>
+            <!-- invisible div to space navbar appropriately -->
             <script>
-                setSpacerHeight('absSpacer', 'navHighlightedLinks')
+                setSpacerHeight('topSpacer', 'navHighlightedLinks');
             </script>
-                <div class="container-fluid d-inline-flex nav navbar row pt-15" style="max-width: 100vw;">
-                    <div class="container-fluid flex-row d-md-none d-lg-none col flex-grow-0 pe-5 me-2 align-content-center" id="toggleIconContainer" style="width: 56px; height: 48px;">
-                        <button class="btn bg-transparent justify-start flex-grow-0"
-                            data-toggle="navToggle"
-                            type="button"
-                            aria-label="Toggle Site Navigation"
+            <nav class="navbar navbar-expand-md bg-transparent" id="navbar">
+                <div class="container-fluid border-top border-0">
+                    <!-- Mobile (small screen) toggle button -->
+                    <div class="dropdown">
+                        <button
+                            class="btn bg-transparent d-md-none flex-fill float-start"
+                            id="dropdownMenuButton"
+                            type="button" 
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
-                            onclick="swapVisById('\#navToggle')"
+                            onclick="toggleNavIcons()"
                         >
-                            <!-- hidden if size > sm -->
-                            <i class="nav d-sm-inline-block d-md-none d-lg-none" id="navToggle">
-                                <!-- svg snagged from gamespot.com -->
+                            <i id="navToggleOpen">
+                                <!-- hamburger icon snagged from gamespot.com -->
                                 <svg width="16" height="16" viewBox="0 0 80 80" fill="#262626">
                                     <path d="M0 0h80v16H0zM0 32h56v16H0zM0 64h32v16H0z"/>
                                 </svg>
                             </i>
-                            <!-- not hidden based on size in case screen maximized while viewing dropdown -->
-                            <i class="nav " id="navToggle" hidden>
+                            <i  class="d-none" id="navToggleClose">
+                                <!-- close dropdown menu icon -- snagged from gamespot.com -->
                                 <svg width="16" height="16" viewBox="0 0 80 80" fill="#de004a">
                                     <path d="M80 11.31 68.69 0 40 28.69 11.31 0 0 11.31 28.69 40 0 68.69 11.31 80 40 51.31 68.69 80 80 68.69 51.31 40 80 11.31z"/>
                                 </svg>
                             </i>
                         </button>
+                        <ul class="dropdown-menu border-0" data-toggle="toggle" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#" onclick="swapMainContent('home.html')">Home</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="swapMainContent('about.html')">About Us</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="swapMainContent('contact.html')">Contact Us</a></li>
+                        </ul>
                     </div>
-                
-                    <div class="nav navbar-brand flex-grow-0 justify-content-center col flex-grow-0 ps-2" id="gsLogo">
-                        <svg width="30" height="30" viewBox="0 0 731.79 731.81" class="symbol symbol-logo-outline-circle" id="gsLogo" fill="#262626">
+                    <!-- snagged logo from gamespot -->
+                    <a class="navbar-brand mx-auto mx-md-0 ps-md-3" onclick="swapMainContent('home.html')">
+                        <svg viewBox="0 0 731.79 731.81" id="gsLogo" width="40" height="40" fill="#262626">
                             <path d="M365.89 0C163.81 0 0 163.83 0 365.91s163.81 365.9 365.89 365.9 365.9-163.81 365.9-365.9S568 0 365.89 0Zm0 684.24c-175.81 0-318.33-142.53-318.33-318.33S190.08 47.58 365.89 47.58 684.23 190.1 684.23 365.91 541.71 684.24 365.89 684.24Z"/>
                             <path d="M508.25 506.5c-8.35-5.84-19.41-8.42-31.6-8.42-9.51 0-33.75 3.88-71.5 11.7-19.88 4.27-35.17 5.61-46.07 5.61-43.63 0-80.47-14.35-112.21-43.36-30.26-29.3-46.21-64.56-46.21-105.9 0-42.29 14.94-77.74 46-106.05 31.92-29.35 72.16-43.65 121.16-43.65 32.09 0 57.48 2.21 78.49 7.5 3.24.65 19.22 5.84 47.56 16.19l-11.58 44.3c-14.15-5.81-24.73-9.14-32.43-10.73a169.56 169.56 0 0 0-46.22-6.16c-31.92 0-56.85 10.13-75.72 30.29-17.42 18.52-25.53 41.72-25.53 68.73 0 26.67 7.79 48.47 23.74 66.42 16.17 18.15 35.2 26.03 57.16 26.03 8.48 0 16-1.34 21.83-6.58a27.1 27.1 0 0 0 9-20.83v-60.52h94.15Z"/>
                         </svg>
-                    </div>    
-                    <div class="container-inline-flex flex-grow-1 col float-end" id="signInContainer">
-                        <div class="row float-end">
+                    </a>
+                    <!-- Expanded Menu for non-mobile devices -->
+                    <div class="collapse navbar-collapse d-md-flex justify-content-start" id="expandedMenu">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ms-3 ms-lg-4 me-3">
+                                <a class="nav-link" href="#" onclick="swapMainContent('home.html')">Home</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#" onclick="swapMainContent('about.html')">About</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#" onclick="swapMainContent('contact.html')">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end of expandedMenu -->
+                    <div class="col float-end" id="signIn">
+                        <div class=" float-end pe-3 mx-0 me-md-4 me-lg-5">
                             <a href="signup.html">
                                 <svg width="16" height="16" viewBox="0 0 22 28" aria-hidden="true" fill="#262626">
                                     <path d="M22 21.953q0 1.875-1.141 2.961T17.828 26H4.172q-1.891 0-3.031-1.086T0 21.953q0-.828.055-1.617t.219-1.703.414-1.695.672-1.523.969-1.266 1.336-.836T5.407 13q.141 0 .656.336t1.164.75 1.687.75 2.086.336 2.086-.336 1.687-.75 1.164-.75.656-.336q.953 0 1.742.313t1.336.836.969 1.266.672 1.523.414 1.695.219 1.703.055 1.617zM17 8q0 2.484-1.758 4.242T11 14t-4.242-1.758T5 8t1.758-4.242T11 2t4.242 1.758T17 8z">
@@ -136,21 +171,21 @@
                                 </svg>
                             </a>
                         </div>
-                </div>    
+                    </div>
+                    <!-- end signIn -->
+                </div>
+                <!-- end navbar     -->
             </div>
         </header>
     </div>
-    <div class="container container-fluid h-100 justify-content-center" id="mainContent">
-        <main>
-            <div class="container-fluid flex-sm-wrap" id="topArticles">
-                <div class="m-md-0 m-2 flex-lg-grow-1" id="article1">
-
-                </div>
-                <div class="m-md-0 flex-md-shrink-1 m-lg-2" id="article2">
-
-                </div>
-            </div>
-        </main>
+    <div id="navSpacer"></div>
+        <!-- invisible div to space mainContent appropriately -->
+        <script>
+            setSpacerHeight('navSpacer', 'headerContainer');
+        </script>
+    <!-- end headerContainer -->
+    <div class="container row" id="mainContent">
+        <!-- loaded content into mainContent-->
     </div>
 </div>
 </body>

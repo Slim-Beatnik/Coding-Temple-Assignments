@@ -3,6 +3,14 @@ html {
     font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
 }
 
+#superContainer {
+    min-height: 100% !important;
+}
+
+#headerContainer {
+    width:80vw !important;
+}
+
 .roboto {
     font-family: "Roboto", serif !important;
     font-optical-sizing: auto;
@@ -11,16 +19,14 @@ html {
     line-height: 1.222;
 }
 
-#headerContainer {
-    min-width: 100vw;
-}
-
  /* top links */
 #navHighlightedLinks {
     padding: 20px 15px 20px 15px;
     text-wrap-mode: nowrap;
     overflow-x: scroll;
     scrollbar-width: none;
+    color: #666;
+    z-index: 100;
 }
 
 /* spans with parent matching parent id except last, put a | after */
@@ -31,10 +37,30 @@ html {
     color: #666;
     padding-left: 5px;
     padding-right: 5px;
+    
 }
 
 #navHighlightedLinks a {
     font-size: xx-small !important;
+}
+
+/* override button border */
+#dropdownMenuButton {
+    border: 0 !important;
+}
+
+.expandedMenuLink {
+    color: #262626 !important;
+    text-decoration: none !important;
+    display: inline-block;
+    position: relative;
+    padding: 1rem 0 0.8rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out; 
+}
+
+.expandedMenuLink:hover {
+    border-bottom: 2px solid #de00a4;
 }
 
 
@@ -56,6 +82,37 @@ a:hover {
     width: 100%;
 }
 
-#signInContainer {
-    min-width: calc()
+/* override navbar */
+.navbar .container-fluid {
+    padding-left: 0 !important;
+}
+
+/* override nav-link */
+.nav-link {
+    color: #262626 !important;
+    text-decoration: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out; 
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid #de00a4;
+}
+
+#mainContainer {
+    margin-top: 2rem !important;
+}
+
+/********************HOME*******************/
+
+#homeContainer img {
+    max-width: 100%;
+    height: auto;
+    z-index: 75;
+}
+
+#article1 {
+    max-width: 50%;
 }
