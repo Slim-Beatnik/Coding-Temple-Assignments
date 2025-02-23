@@ -64,7 +64,7 @@
     </svg> -->
     
 <body class="roboto">
-    <div class="position-fixed font-thin mb-8 overflow-x-scroll" id="navHighlightedLinks">
+    <div class="font-thin mb-8 overflow-x-scroll" id="navHighlightedLinks">
         <!-- Placeholder links to show :hover color and underline transparency -->
         <span class="col">
             <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 01</a>
@@ -97,22 +97,22 @@
             <a class="link-underline-secondary link-underline-opacity-0" href="#">Highlighted Article 10</a>
         </span>
     </div>
-<div class="align-items-center flex-column d-flex container-fluid overflow-x-hidden" id="superContainer">
+    <!-- end of navHighlightedLinks -->
+<div class="align-items-center flex-column d-flex container-fluid min-h-full" id="superContainer">
     <!-- height figured out through guess and check ~60px -->
-    <div class="flex-sm-fill min-vw-100 px-0 ps-md-3 ps-lg-5" id="headerContainer" style="height: 8.216rem;">
+    <div class="flex-sm-fill min-vw-100 px-0 ps-md-3 ps-lg-5" id="headerContainer">
         <header class="">
-            <!-- position absolute to scroll on small screens, scrollbar width=0 to hide -->
-            
-            <!-- end navHighlightedLinks -->
+            <!-- TOPSPACER DEPRECATED 
             <div id="topSpacer"></div>
-            <!-- invisible div to space navbar appropriately -->
+             
+             invisible div to space navbar appropriately
             <script>
                 setSpacerHeight('topSpacer', 'navHighlightedLinks');
-            </script>
-            <nav class="navbar navbar-expand-md bg-transparent py-0" id="navbar">
-                <div class="container border-top border-0 pt-2">
+            </script> -->
+            <nav class="navbar navbar-expand-md bg-transparent py-0 " id="navbar">
+                <div class="container-fluid border-top border-0 pt-2">
                     <!-- Mobile (small screen) toggle button -->
-                    <div class="dropdown">
+                    <div class="dropdown ms-3">
                         <button
                             class="btn bg-transparent d-md-none flex-fill float-start"
                             id="dropdownMenuButton"
@@ -134,7 +134,7 @@
                                 </svg>
                             </i>
                         </button>
-                        <ul class="dropdown-menu border-0" data-toggle="toggle" aria-labelledby="dropdownMenuButton">
+                        <ul class="dropdown-menu border-0" data-toggle="toggle" aria-labelledby="dropdownMenuButton" id="navDropdown">
                             <li><a class="dropdown-item" href="#" onclick="swapMainContent('home.html')">Home</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#" onclick="swapMainContent('about.html')">About Us</a></li>
@@ -180,11 +180,11 @@
         </header>
     </div>
     <!-- end headerContainer -->
-    <div class="row d-grid max-w-75" id="mainContent">
+    <div class="row d-grid flex-grow-1 mt-4" id="mainContent">
         <!-- loaded content into mainContent-->
     </div>
 
-        <footer class="col bottom-0 d-flex align-items-center justify-content-center w-100">
+        <footer class="d-flex position-relative align-items-center justify-content-center w-100">
             <!-- snagged from gamespot.com -- gamespot full logo-->
             <i>
                 <svg onclick="swapMainContent('home.html')" width="140" height="60px" viewBox="0 0 1631.76 517.06" aria-hidden="true" fill="#ebcc0e">

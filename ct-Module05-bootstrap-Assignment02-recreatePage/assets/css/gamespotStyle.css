@@ -3,6 +3,11 @@ html {
     font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
 }
 
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+}
+
 .roboto {
     font-family: "Roboto", serif !important;
     font-optical-sizing: auto;
@@ -11,11 +16,11 @@ html {
     line-height: 1.222;
 }
 
-#superContainer {
-}
+/* #superContainer {
+} */
 
 #headerContainer {
-    width:80vw !important;
+    width:100vw !important;
     z-index: 1000;
 }
 
@@ -24,10 +29,23 @@ html {
  /* top links */
 #navHighlightedLinks {
     padding: 20px 15px 20px 15px;
-    text-wrap-mode: nowrap;
-    overflow-x: scroll;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none;
     color: #666;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* had help finding compatibility */
+#navHighlightedLinks::-webkit-scrollbar {
+    height: none;
+}
+
+/* had help finding compatibility */
+#navHighlightedLinks::-webkit-scrollbar-thumb {
+    background-color: transparent;
 }
 
 /* spans with parent matching parent id except last, put a | after */
@@ -79,13 +97,14 @@ a:hover {
     display: none;
 }
 
-#absSpacer {
-    width: 100%;
-}
-
 /* override navbar */
 .navbar .container-fluid {
     padding-left: 0 !important;
+}
+
+#navDropdown {
+    width: 100vw;
+    height: 100vh;
 }
 
 /* override nav-link */
@@ -102,9 +121,8 @@ a:hover {
     border-bottom: 2px solid #de00a4;
 }
 
-#mainContainer {
-    height: calc(100vh - 8.216rem - 60px - 52rem);
-}
+/* #mainContainer {
+} */
 
 footer {
     background-color: #2b2d31;
@@ -132,5 +150,5 @@ footer {
     overflow: hidden;
 }
 
-#article1 {
-}
+/* #article1 {
+} */

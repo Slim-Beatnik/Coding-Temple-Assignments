@@ -3,7 +3,7 @@
     Gamespot uses svg for dropdown toggle and close dropdown button
     Id names can be the same on multiple elements or single elements
 */
-//unused but it does work
+//DEPRECATED
 function swapVisById(elId) {
     // in html, escape css id name -- '#elId' looks like '\#elId'
     const els = document.querySelectorAll(elId);
@@ -20,6 +20,7 @@ function toggleNavIcons() {
 }
 
 // copy height from absolute div and apply it to spacer div
+//DEPRECATED
 function setSpacerHeight(spacerId, idToMatchHeight) {
     const spacer = document.getElementById(spacerId);
     const heightToMatch = document.getElementById(idToMatchHeight).offsetHeight;
