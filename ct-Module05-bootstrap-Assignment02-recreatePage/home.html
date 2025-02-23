@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
-<body>
-    <h1>Your Mom!</h1>
-    <div class="container-fluid" id="homeContainer">
-        <div class="topStoryContainer d-grid justify-content-around row">
-            <div class="row row-cols-1 row-cols-md-2" id="twoTopAritcles">
-                <div class="row-md- card-img-overlay" id="article1">
-                    <img class="placeholder">
-                    <div class="card bg-transparent text-light">
-                        <img src="assets/img/gsExampleImg01.jpg" class="card-img" alt="card-img-overlay">
+</body>
+    <div class="container-fluid h-100 position-relative d-grid flex-column" id="homeContainer">
+        <div class="card-group" id="topStoryContainer">
+            <div class="row gx-md-0 gx-lg-3 gy-3 px-md-3" id="topAritcles">
+                
+                <!-- First Card - Larger on md/lg -->
+                <div class="col-12 col-md-7 align-items-stretch">
+                    <div class="card text-light bg-danger box-content">
+                        <img src="assets/img/gsTopStory01.jpg" class="card-img img-fluid object-fit-cover" alt="card-img-overlay">
                         <div class="card-img-overlay">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            
                         </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <div class="card text-light bg-primary">
+                        <img src="assets/img/gsTopStory02.jpg" class="card-img img-fluid object-fit-cover" alt="card-img-overlay">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
                         </div>
+                    </div>
                 </div>
-                <div id="article2 grid-cols-5">
-                    <img class="placeholder" id="article2">
-                </div>
+                
             </div>
         </div>
         <!-- end of topStoryContainer -->
-
     </div>
 </body>
-</html>

@@ -3,14 +3,6 @@ html {
     font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
 }
 
-#superContainer {
-    min-height: 100% !important;
-}
-
-#headerContainer {
-    width:80vw !important;
-}
-
 .roboto {
     font-family: "Roboto", serif !important;
     font-optical-sizing: auto;
@@ -19,6 +11,16 @@ html {
     line-height: 1.222;
 }
 
+#superContainer {
+}
+
+#headerContainer {
+    width:80vw !important;
+    z-index: 1000;
+}
+
+
+
  /* top links */
 #navHighlightedLinks {
     padding: 20px 15px 20px 15px;
@@ -26,7 +28,6 @@ html {
     overflow-x: scroll;
     scrollbar-width: none;
     color: #666;
-    z-index: 100;
 }
 
 /* spans with parent matching parent id except last, put a | after */
@@ -102,17 +103,34 @@ a:hover {
 }
 
 #mainContainer {
-    margin-top: 2rem !important;
+    height: calc(100vh - 8.216rem - 60px - 52rem);
+}
+
+footer {
+    background-color: #2b2d31;
+    height: 25%;
 }
 
 /********************HOME*******************/
+/*
+#twoTopAritcles img {
 
-#homeContainer img {
-    max-width: 100%;
-    height: auto;
-    z-index: 75;
+}
+*/
+ #homeContainer {
+    height: 100%;
+}
+
+/* override rounded border on cards */
+.card, .card-img {
+    border-radius: 0;
+    border: none;
+}
+
+#topArticles .card {
+    height: 360px;
+    overflow: hidden;
 }
 
 #article1 {
-    max-width: 50%;
 }

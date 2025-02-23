@@ -3,7 +3,7 @@
     Gamespot uses svg for dropdown toggle and close dropdown button
     Id names can be the same on multiple elements or single elements
 */
-
+//unused but it does work
 function swapVisById(elId) {
     // in html, escape css id name -- '#elId' looks like '\#elId'
     const els = document.querySelectorAll(elId);
