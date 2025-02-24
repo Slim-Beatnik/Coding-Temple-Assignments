@@ -3,33 +3,57 @@
 <head>
     <title>Home</title>
 </head>
-</body>
+<body>
     <div class="container-fluid h-100 position-relative d-grid flex-column" id="homeContainer">
         <div class="card-group" id="topStoryContainer">
-            <div class="row gx-md-0 gx-lg-3 gy-3 px-md-3 align-items-stretch" id="topAritcles">
-                
-                <!-- First Card - Larger on md/lg -->
+            <div class="row gx-md-0 gx-lg-3 gy-3 px-md-3 align-items-stretch" id="topArticles">
+                <!-- First Card - Larger on md/lg - fullwidth on sm -->
                 <div class="col-12 col-md-7 d-flex">
-                    <div class="card text-light bg-danger w-100">
+                    <a href="#" class="card text-light w-100">
                         <img src="assets/img/gsTopStory01.jpg" class="card-img img-fluid object-fit-cover" alt="card-img-overlay">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <div class="card-img-overlay d-block">
+                            <div class="img-overlay-icon d-flex flex-column align-content-center justify-content-center align-items-center">
+                                <!-- gamespot vector img-symbol -->
+                                    <svg class="icon" viewBox="0 0 24 19" fill="#de004a">
+                                        <path fill-rule="evenodd" d="M21.545 0c.527 0 .979.193 1.354.581.375.388.563.854.563 1.398v15.042a1.94 1.94 0 0 1-.563 1.398 1.815 1.815 0 0 1-1.354.581H2.378c-.527 0-.979-.193-1.354-.581a1.94 1.94 0 0 1-.562-1.398V1.979c0-.544.187-1.01.562-1.398A1.815 1.815 0 0 1 2.378 0h19.167Zm0 1.583H2.378a.36.36 0 0 0-.27.118.387.387 0 0 0-.114.278v12.658L7.36 9.5l1.916 1.98 6.134-6.334 6.518 6.285V1.979c0-.107-.039-.2-.114-.278a.36.36 0 0 0-.27-.118ZM8.128 5.542c0 .66-.223 1.22-.67 1.682-.448.462-.991.693-1.63.693-.64 0-1.182-.23-1.63-.693a2.328 2.328 0 0 1-.67-1.682c0-.66.223-1.221.67-1.683.448-.462.99-.693 1.63-.693.639 0 1.182.231 1.63.693.447.462.67 1.023.67 1.683Z">
+                                        </path>
+                                    </svg>
+                            </div>
+                            <div class="card-spacer d-block row"></div>
+                            <h3 class="card-title">Super Awesome Game Info</h3>
+                            <h5 class="card-text">Something intruiging about how you didn't expect much and you know if you click your viewpoint will only be validated, because it's still just Fortnite.</h5>
                         </div>
-                    </div>
+                    </a>
                 </div>
+                <!-- Second car - (12 - first card col# on md/lg) - fullwidth on sm -->
                 <div class="col-12 col-md-5 d-flex">
-                    <div class="card text-light bg-primary w-100">
-                        <img src="assets/img/gsTopStory02.jpg" class="card-img img-fluid" alt="card-img-overlay">
-                        <div class="card-img-overlay d-flex flex-column justify-content-end">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="card text-light w-100">
+                        <img src="assets/img/gsTopStory02.jpg" class="card-img object-fit-cover img-fluid" alt="card-img-overlay">
+                        <div class="card-img-overlay d-block row">
+                            <div class="img-overlay-icon d-flex flex-column align-content-center justify-content-center align-items-center">
+                                <!-- gamespot vector img-symbol -->
+                                    <svg class="icon" viewBox="0 0 24 19" fill="#de004a">
+                                        <path fill-rule="evenodd" d="M21.545 0c.527 0 .979.193 1.354.581.375.388.563.854.563 1.398v15.042a1.94 1.94 0 0 1-.563 1.398 1.815 1.815 0 0 1-1.354.581H2.378c-.527 0-.979-.193-1.354-.581a1.94 1.94 0 0 1-.562-1.398V1.979c0-.544.187-1.01.562-1.398A1.815 1.815 0 0 1 2.378 0h19.167Zm0 1.583H2.378a.36.36 0 0 0-.27.118.387.387 0 0 0-.114.278v12.658L7.36 9.5l1.916 1.98 6.134-6.334 6.518 6.285V1.979c0-.107-.039-.2-.114-.278a.36.36 0 0 0-.27-.118ZM8.128 5.542c0 .66-.223 1.22-.67 1.682-.448.462-.991.693-1.63.693-.64 0-1.182-.23-1.63-.693a2.328 2.328 0 0 1-.67-1.682c0-.66.223-1.221.67-1.683.448-.462.99-.693 1.63-.693.639 0 1.182.231 1.63.693.447.462.67 1.023.67 1.683Z">
+                                        </path>
+                                    </svg>
+                            </div>
+                            <div class="card-spacer d-block"></div>
+                            <h3 class="card-title">Card title</h3>
+                            <h5 class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</h5>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                
             </div>
+            <!-- end of topAritcles -->
         </div>
         <!-- end of topStoryContainer -->
+        <div class="row d-flex" id="carouselTop">
+            <div class="col-6 float-left">
+                <a href="#">
+                    <h1>Game Deals</h1>
+                </a>
+            </div>
+        </div>
     </div>
 </body>
+</html>

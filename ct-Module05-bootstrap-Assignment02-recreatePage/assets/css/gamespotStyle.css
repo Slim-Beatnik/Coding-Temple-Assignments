@@ -6,6 +6,7 @@ html {
 html, body {
     overflow-x: hidden !important;
     width: 100%;
+    height: 100%;
 }
 
 .roboto {
@@ -35,7 +36,7 @@ html, body {
     overflow-y: hidden;
     scrollbar-width: none;
     color: #666;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; /* had help finding compatibility */
 }
 
 /* had help finding compatibility */
@@ -84,12 +85,12 @@ html, body {
 
 
 /* link colors */
-a {
+.expandedMenuLink a {
     stroke-opacity: none;
     color: inherit;
 }
 
-a:hover {
+.expandedMenuLink a:hover {
     color: #de004a !important;
 }
 
@@ -125,18 +126,18 @@ a:hover {
 } */
 
 footer {
+    position: relative;
     background-color: #2b2d31;
     height: 25%;
 }
 
 /********************HOME*******************/
-/*
-#twoTopAritcles img {
 
-}
-*/
  #homeContainer {
     height: 100%;
+}
+.card {
+    background: #000;
 }
 
 /* override rounded border on cards */
@@ -145,10 +146,93 @@ footer {
     border: none;
 }
 
+h3 {
+    font-weight: bold !important;
+}
+h5 {
+    font-weight: 450 !important;
+    opacity: 80%;
+}
+
 #topArticles .card {
-    height: 360px;
+    height: 100%;
+    position: relative;
     overflow: hidden;
 }
 
-/* #article1 {
-} */
+#topArticles .card-img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+#topArticles .card-img-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+/* set height to large screens */
+#topArticles .card, #topArticles .card-img {
+    height: 420px;
+}
+
+.img-overlay-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 9999em;
+    background-color: white;
+}
+
+.icon{
+    height: 36px;
+    width: 36px;
+}
+
+/* set default height to large screens */
+.card-spacer {
+    height: calc(225px + 60px);
+}
+
+/* set default height to large screens */
+.card:hover {
+    .card-spacer {
+        height: calc(135px + 60px);
+        transition: height 0.1s ease-in-out;
+    }
+    .card-img {
+        opacity: 60%;
+        transition: opacity 0.2s ease-in-out;
+    }
+}
+
+
+/* Height for screens 1280px and smaller set to 360px*/
+@media (max-width: 1280px) {
+    #topArticles .card,
+    #topArticles .card-img {
+      height: 360px; 
+    }
+    .card-spacer {
+        height: 225px;
+    }
+    .card:hover {
+        .card-spacer {
+            height: 135px;
+        }
+    }
+  }
+
+  /* set dimensions for smaller screens */
+@media (max-width: 640px) {
+    #topArticles .img-overlay-icon {
+        width: 40px;
+        height: 40px; 
+    }
+    #topArticles .icon {
+        width: 16px;
+        height: 16px; 
+    }
+}
