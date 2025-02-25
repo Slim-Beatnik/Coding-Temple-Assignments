@@ -85,12 +85,19 @@ html, body {
 
 
 /* link colors */
-.expandedMenuLink a {
-    stroke-opacity: none;
-    color: inherit;
+#navHighlightedLinks a {
+    text-decoration: none !important;
+    stroke-opacity: none !important;
+    color: #666
 }
 
-.expandedMenuLink a:hover {
+.expandedMenuLink a, #carouselContainer a {
+    text-decoration: none !important;
+    stroke-opacity: none !important;
+    color: #262626 !important;
+}
+
+#navHighlightedLinks a:hover, .expandedMenuLink a:hover, #carouselContainer a:hover {
     color: #de004a !important;
 }
 
@@ -133,9 +140,10 @@ footer {
 
 /********************HOME*******************/
 
- #homeContainer {
+#homeContainer {
     height: 100%;
 }
+
 .card {
     background: #000;
 }
@@ -179,24 +187,26 @@ h5 {
     height: 420px;
 }
 
+/* calc to show diff between breakpoints */
 .img-overlay-icon {
-    height: 80px;
-    width: 80px;
+    height: calc(40px + 40px);
+    width: calc(40px + 40px);
     border-radius: 9999em;
     background-color: white;
 }
 
+/* calc to show diff between breakpoints */
 .icon{
-    height: 36px;
-    width: 36px;
+    height: calc(16px + 20px);
+    width: calc(16px + 20px);
 }
 
-/* set default height to large screens */
+/* set default height to large screens -- calc to show diff between breakpoints */
 .card-spacer {
     height: calc(225px + 60px);
 }
 
-/* set default height to large screens */
+/* set default height to large screens -- calc to show diff between breakpoints */
 .card:hover {
     .card-spacer {
         height: calc(135px + 60px);
@@ -208,6 +218,40 @@ h5 {
     }
 }
 
+/* carouselContainer a and a:hover See: .expandedMenuLink */
+
+#carouselContainer {
+    width: 1000px;
+}
+
+#carouselContainer h2 {
+    color: #de004a;
+    font-size: calc(22px + 4*((100vw - 320px) / 960));
+}
+
+#carouselHeader {
+    margin-bottom: 0.8em !important;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    left: unset;
+    right: 0 !important;
+    bottom: 0 !important;
+    position: relative;
+    
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    filter: unset !important;
+    fill: #262626 !important;
+    z-index: 1000 !important;
+}
+
+
+
+/********************CUSTOM BREAKPOINTS*******************/
 
 /* Height for screens 1280px and smaller set to 360px*/
 @media (max-width: 1280px) {
