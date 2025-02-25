@@ -91,13 +91,13 @@ html, body {
     color: #666
 }
 
-.expandedMenuLink a, #carouselContainer a {
+.expandedMenuLink a, #carouselContainer a, .card-text a {
     text-decoration: none !important;
     stroke-opacity: none !important;
     color: #262626 !important;
 }
 
-#navHighlightedLinks a:hover, .expandedMenuLink a:hover, #carouselContainer a:hover {
+#navHighlightedLinks a:hover, .expandedMenuLink a:hover, .card-text a:hover {
     color: #de004a !important;
 }
 
@@ -144,10 +144,6 @@ footer {
     height: 100%;
 }
 
-.card {
-    background: #000;
-}
-
 /* override rounded border on cards */
 .card, .card-img {
     border-radius: 0;
@@ -166,6 +162,7 @@ h5 {
     height: 100%;
     position: relative;
     overflow: hidden;
+    background: #000;
 }
 
 #topArticles .card-img {
@@ -242,27 +239,58 @@ h5 {
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
+    position: relative;
     width: 30px;
     height: 30px;
+    bottom: 13px;
+    right: 0;
     filter: unset !important;
     fill: #262626 !important;
     z-index: 1000 !important;
 }
 
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: #262626;
+    border-radius: 50%;
+    padding: 15px;
+}
 
+.carousel-control-prev-icon {
+    /* gross */
+    right: 36px;
+    bottom: -17px
+}
+
+.carouselContainer .card .card-body {
+    text-align: justify;
+}
+
+#carouselContainer .card-text {
+    color: #262626;
+    font-weight: 400 !important;
+}
+
+#carouselContainer .card-text a:hover {
+    color: #de004a !important;
+}
 
 /********************CUSTOM BREAKPOINTS*******************/
 
 /* Height for screens 1280px and smaller set to 360px*/
 @media (max-width: 1280px) {
+    
     #topArticles .card,
     #topArticles .card-img {
-      height: 360px; 
+        height: 360px; 
     }
+
     .card-spacer {
         height: 225px;
     }
+
     .card:hover {
+
         .card-spacer {
             height: 135px;
         }
@@ -274,6 +302,7 @@ h5 {
     #topArticles .img-overlay-icon {
         width: 40px;
         height: 40px; 
+
     }
     #topArticles .icon {
         width: 16px;

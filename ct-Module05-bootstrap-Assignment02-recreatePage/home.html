@@ -47,85 +47,149 @@
             <!-- end of topAritcles -->
         </div>
         <!-- end of topStoryContainer -->
-        <div class="d-grid col py-4 w-100" id="carouselContainer">
-            <div class="row" id="carouselHeader">
-                <div class="cols-6 float-left col" id="carouselHeaderLink">
-                    <a href="#">
-                        <h2>Game Deals</h2>
+
+        <div class="container py-3" id="carouselContainer">
+            <!-- Carousel Header -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <a href="#" class="text-decoration-none justify-content-end">
+                    <h2 class="mb-0">Game Deals</h2>
+                </a>
+                <div>
+                    <a class="carousel-control-prev me-2" href="#dealsCarousel" role="button" data-bs-target="#dealsCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#dealsCarousel" role="button" data-bs-target="#dealsCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
                     </a>
                 </div>
-                    <div class="col-6 col rowcontainer" id="carouselHeaderControls">
-                        <div class="d-flex col w-100 float-right">
-                            <a class="carousel-control-prev g" href="#dealsCarousel" role="button" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#dealsCarousel" role="button" aria-hidden="true" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                                <span class="visually-hidden">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- end carouselHeaderControls -->
             </div>
-            <!-- end of dealsCarouselTop -->
-            <div class="carousel slide pointer-event pt-4" id="dealsCarousel">
+        
+            <!-- Carousel -->
+            <div id="dealsCarousel" class="carousel slide">
                 <div class="carousel-inner">
-                    <div class="carousel-item active row">
-                        <div class="d-grid col w-100 gx-2 nowrap" alt="Slide 1" id="slide1">
-                            <div class="card col-3 col">
-                                <img src="assets/img/gsCarousell1.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Game Deal 1</h6>
-                                    <p class="card-text">Here's a game as cheap as any company will let us have it.</p>
+                    <div class="carousel-item active" id="slide1">
+                        <div class="row g-3">
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell1.jpg" class="card-img-top" alt="Game 1">
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
+                                <!-- end card -->
                             </div>
-                            <!-- end card 1 -->
-                            <div class="card col-3 col">
-                                <img src="assets/img/gsCarousell2.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Game Deal 2</h6>
-                                    <p class="card-text">Here's a game as cheap as any company will let us have it.</p>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell2.jpg" class="card-img-top" alt="Game 2">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
                                 </div>
+                                <!-- end card -->
                             </div>
-                            <!-- end card 2 -->
-                            <div class="card col-3 col">
-                                <img src="assets/img/gsCarousell3.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Game Deal 3</h6>
-                                    <p class="card-text">Here's a game as cheap as any company will let us have it.</p>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell3.jpg" class="card-img-top" alt="Game 3">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
                                 </div>
+                                <!-- end card -->
                             </div>
-                            <!-- end card 3 -->
-                            <div class="card col-3">
-                                <img src="assets/img/gsCarousell4.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Game Deal 4</h6>
-                                    <p class="card-text">Here's a game as cheap as any company will let us have it.</p>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell4.jpg" class="card-img-top" alt="Game 4">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
                                 </div>
+                                <!-- end card -->
                             </div>
-                            <!-- end card 4 -->
                         </div>
-                        <!-- end slide 1 -->
                     </div>
-                    <!-- end carousel item 1 -->
-                    <div class="carousel-item">
-                        <div class="d-block w-100" alt="Slide 2" id="slide2">
-                            <div class="card col-3">
-                                <img src="assets/img/gsCarousell5.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h6 class="card-title">Game Deal 5</h6>
-                                    <p class="card-text">Here's a game as cheap as any company will let us have it.</p>
+                    <!-- end slide1 -->
+                    <div class="carousel-item" id="slide2">
+                        <div class="row g-3"> <!-- don't switch this -->
+                            <div class="col-3"> <!-- and this -->
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell5.jpg" class="card-img-top" alt="Game 4">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
                                 </div>
+                                <!-- end card -->
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell6.jpg" class="card-img-top" alt="Game 6">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell7.jpg" class="card-img-top" alt="Game 7">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <div class="col-3">
+                                <div class="card">
+                                    <a href="#"><img src="assets/img/gsCarousell8.jpg" class="card-img-top" alt="Game 8">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                                 <a href="#">
+                                                     Discounted game deal
+                                                </a>
+                                            </p>
+                                    </div>
+                                </div>
+                                <!-- end card -->
                             </div>
                         </div>
                     </div>
+                    <!-- end slide2 -->
                 </div>
-                <!-- end carousel inner -->
+                <!-- end carousel-inner -->
             </div>
-            <!-- end of dealsCarousel -->
+            <!-- end dealsCarousel -->
         </div>
-        <!-- end of carouselContainer -->
+        <!-- end carouselContainer -->
     </div>
 </body>
 </html>
