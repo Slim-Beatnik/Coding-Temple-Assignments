@@ -72,14 +72,13 @@ html, body {
 #expandedMenu {
     color: #262626 !important;
     text-decoration: none !important;
-    display: inline-block;
     position: relative;
     padding: 1rem 0 0.8rem 0;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease-in-out; 
 }
 
-#expandedMenuLink:hover {
+#expandedMenu:hover {
     border-bottom: 2px solid #de00a4;
 }
 
@@ -99,7 +98,7 @@ html, body {
     }
 }
 
-#navHighlightedLinks, #expandedMenuLink, .nav-item, .card-text {
+#navHighlightedLinks, #expandedMenu, .nav-item, .card-text {
     a:hover {
         color: #de004a !important;
     }
