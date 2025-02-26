@@ -69,7 +69,7 @@ html, body {
     border: 0 !important;
 }
 
-.expandedMenuLink {
+#expandedMenuLink {
     color: #262626 !important;
     text-decoration: none !important;
     display: inline-block;
@@ -79,7 +79,7 @@ html, body {
     transition: border-bottom 0.3s ease-in-out; 
 }
 
-.expandedMenuLink:hover {
+#expandedMenuLink:hover {
     border-bottom: 2px solid #de00a4;
 }
 
@@ -91,14 +91,18 @@ html, body {
     color: #666
 }
 
-.expandedMenuLink a, #carouselContainer a, .card-text a {
-    text-decoration: none !important;
-    stroke-opacity: none !important;
-    color: #262626 !important;
+#expandedMenu, #carouselContainer, .card-text {
+    a {
+        text-decoration: none !important;
+        stroke-opacity: none !important;
+        color: #262626 !important;
+    }
 }
 
-#navHighlightedLinks a:hover, .expandedMenuLink a:hover, .card-text a:hover {
-    color: #de004a !important;
+#navHighlightedLinks, #expandedMenuLink, .nav-item, .card-text {
+    a:hover {
+        color: #de004a !important;
+    }
 }
 
 [hidden] {
@@ -129,9 +133,6 @@ html, body {
     border-bottom: 2px solid #de00a4;
 }
 
-/* #mainContainer {
-} */
-
 footer {
     position: relative;
     background-color: #2b2d31;
@@ -146,8 +147,8 @@ footer {
 
 /* override rounded border on cards */
 .card, .card-img {
-    border-radius: 0;
-    border: none;
+    border-radius: unset !important;
+    border: none !important;
 }
 
 h3 {
@@ -215,7 +216,7 @@ h5 {
     }
 }
 
-/* carouselContainer a and a:hover See: .expandedMenuLink */
+/* carouselContainer a and a:hover See: #expandedMenuLink */
 
 #carouselContainer {
     width: 1000px;
@@ -242,7 +243,7 @@ h5 {
     position: relative;
     width: 30px;
     height: 30px;
-    bottom: 13px;
+    bottom: 13px; /* you guessed it, I checked. */
     right: 0;
     filter: unset !important;
     fill: #262626 !important;
@@ -275,6 +276,58 @@ h5 {
     color: #de004a !important;
 }
 
+/*********************CONTACT*************************/
+
+.input-group .input-group-text {
+    background-color: #2b2d31 !important;
+    color: #ebcc0e !important;
+    border-radius: 0 !important;
+    border-color: transparent !important;
+
+}
+
+.form-control {
+    border-radius: 0 !important;
+    border-color: transparent !important;
+}
+
+.form-check {
+    stroke-width: 2px;
+    border-style: groove;
+}
+
+/**************************DEALS****************************/
+
+table td {
+    color: #ebcc0e !important;
+    background-color: #2b2d31 !important;
+}
+
+table tr:not(:first-child) {
+    text-align: center;
+}
+
+table tr:hover {
+    td {
+        color:#de004a !important;
+    }
+}
+
+table th:nth-child(5) {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+table td:nth-child(5) {
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+}
+
+#dealsSpacer {
+    height: 180px;
+    width: 100%;
+}
+
 /********************CUSTOM BREAKPOINTS*******************/
 
 /* Height for screens 1280px and smaller set to 360px*/
@@ -295,7 +348,7 @@ h5 {
             height: 135px;
         }
     }
-  }
+}
 
   /* set dimensions for smaller screens */
 @media (max-width: 640px) {

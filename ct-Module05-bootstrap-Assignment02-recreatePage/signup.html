@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+<div class="container-fluid d-grid row h-100" id="formsContainer">
+    <form class="needs-validation" id="signUpForm" action="#" method="#" novalidate>
+        <div class="input-group mb-3 p-1 row align-self-center w-100" id="nameGroup">
+            <div class="input-group input-group-text p-1 d-inline-flex align-self-center">
+                <span class="flex-grow-0 text-center mx-3 initialism" id="basic-addon1">First:</span>
+                <input 
+                    type="text"
+                    class="form-control col-6 col rounded-end-2"
+                    name="firstName"
+                    id="inputFirstName"
+                    placeholder="Your legal first name"
+                    aria-label="Enter your legal first name"
+                    aria-describedby="basic-addon1"
+                    required 
+                />
+                <span class="flex-grow-0 text-center mx-3 initialism" id="basic-addon2">Last:</span>
+                <input
+                    type="text"
+                    class="form-control col-6 col"
+                    name="lastName"
+                    id="inputLastName"
+                    placeholder="Your legal last name"
+                    aria-label="Enter your legal last name"
+                    aria-describedby="basic-addon2"
+                    required 
+                />
+            </div>
+        </div>
+        <div class="input-group mb-3 p-1 row align-self-center w-100" id="emailGroup">
+            <div class="input-group input-group-text p-1 d-inline-flex align-self-center">
+                <span class="flex-grow-0 text-center mx-3 initialism" id="basic-addon3">Email:</span>
+                <input 
+                    type="email"
+                    class="form-control flex-grow-1 rounded-start-2"
+                    name="email"
+                    id="inputEmail"
+                    placeholder="Enter a valid email address"
+                    aria-label="Enter your email address"
+                    aria-describedby="basic-addon3"
+                    required 
+                />
+                <span class="input-group-text flex-grow-0">user@example.com</span>
+            </div>
+        </div>
+        <div class="input-group mb-3 p-1 row align-self-center w-100" id="passwordGroup">
+            <div class="input-group input-group-text p-1 d-inline-flex align-self-center">
+                <span class="flex-grow-0 text-center mx-3 initialism" id="basic-addon4">Choose a password:</span>
+                <input 
+                    type="password"
+                    class="form-control flex-grow-1"
+                    name="password"
+                    id="inputPassword"
+                    placeholder="A strong password is suggested"
+                    aria-label="Choose a password"
+                    aria-describedby="basic-addon4"
+                    required 
+                />
+            </div>
+        </div>
+        <div class="row d-inline-grid">
+            <input type="checkbox" class="form-check d-inline-block my-2 py-1" name="agreement" id="agreement" required />
+            <div class="">By checking this box you agree to the EULA and terms of use.</div>
+        </div>
+        <div class="mb-3 row my-2 py-1">
+            <div class="offset-4 col align-items-center">
+                <button type="submit" class="btn" style="background-color: #de004a; color: white;">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    <!-- end signup form -->
+    <!-- snagged from stackoverflow -->
+</div>
+</body>
+</html>

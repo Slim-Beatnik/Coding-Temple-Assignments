@@ -47,5 +47,46 @@ function swapMainContent(url) {
         .then(fetchedUrlContent => {
             // swap new page into the content div
             document.getElementById('mainContent').innerHTML = fetchedUrlContent;
+            
+            if (url == 'deals.html') {
+                // after a disgusting amount of guess and check trying to tracking this event from the start of index.html
+                const checkboxes = document.querySelectorAll('input[type=checkbox]');
+                checkboxes.forEach((checkbox) => {
+                    checkbox.addEventListener('change', getTotals);
+                });
+            }
+        });
+}
+
+function doTheMath(p0Arr, p1Arr) {
+    if (!p0Arr || p0Arr.length === 0) { return [0, 0]; }
+
+    totals = { 'subtotal': 0, 'savings': 0 };
+
+    for (let i = 0; i < p0Arr.length; i++) {
+        totals.subtotal += parseFloat(p1Arr[i])
+        totals.savings += parseFloat(p0Arr[i]) - parseFloat(p1Arr[i]);
+    }
+    return [totals.subtotal, totals.savings];
+}
+
+function getTotals() {
+    const p0Arr = [];
+    const p1Arr = [];
+
+    const subtotalOutput = document.getElementById('subtotal');
+    const savingsOutput = document.getElementById('savings');
+    
+    // had help finding query search terms
+    const checkedRows = document.querySelectorAll('tr.prod input[type=checkbox]:checked');
+    checkedRows.forEach( row => {
+        // grab the .p# closest to .prod and put the textContent into the array
+        p0Arr.push( row.closest('tr.prod').querySelector('.p0').textContent );
+        p1Arr.push( row.closest('tr.prod').querySelector('.p1').textContent );
     });
+
+    const subSavingsArr = doTheMath(p0Arr, p1Arr);
+    // everything has to have different escape characters :/
+    subtotalOutput.textContent = `$${subSavingsArr[0].toFixed(2)}`;
+    savingsOutput.textContent = `$${subSavingsArr[1].toFixed(2)}`;
 }
