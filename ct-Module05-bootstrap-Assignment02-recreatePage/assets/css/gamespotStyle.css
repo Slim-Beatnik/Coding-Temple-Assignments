@@ -78,11 +78,6 @@ html, body {
     transition: border-bottom 0.3s ease-in-out; 
 }
 
-#expandedMenu:hover {
-    border-bottom: 2px solid #de00a4;
-}
-
-
 /* link colors */
 #navHighlightedLinks a {
     text-decoration: none !important;
@@ -98,7 +93,7 @@ html, body {
     }
 }
 
-#navHighlightedLinks, #expandedMenu, .nav-item, .card-text {
+#navHighlightedLinks, .nav-item, .card-text {
     a:hover {
         color: #de004a !important;
     }
