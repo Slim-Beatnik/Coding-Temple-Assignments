@@ -49,21 +49,21 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/asy
 
 
 Main take aways:
-o   It's clearly a great way to throw information into a site, especially considering you can style it in advance.
-o   I need to look into the errors a bit more see if I can get some flexibility, and maybe even an onclick interuptor - something that recognizes the click and breaks the function if something silly goes wrong without forcing the user to refresh.
-o   One needs to know thy data. Format is everything, if you don't know what you're getting or how you're getting it who knows what class functions will work. -- DEBUG DEBUG DEBUG
-
+<li>It's clearly a great way to throw information into a site, especially considering you can style it in advance.
+<li>I need to look into the errors a bit more see if I can get some flexibility, and maybe even an onclick interuptor - something that recognizes the click and breaks the function if something silly goes wrong without forcing the user to refresh.
+<li>One needs to know thy data. Format is everything, if you don't know what you're getting or how you're getting it who knows what class functions will work. -- DEBUG DEBUG DEBUG
+<ul>
 Things to look for:
-o   All different pokemon types are styled differently when the card populates
-o   The button toggles disabled if the search term isn't in the options list.
-o   The option list is populated with a different fetch endpoint, but uses the same function
-o   To see the fetch error: hide the create functions in script.js
-o   To see the http error: inspect the form, delete the disabled tag with no search value or a non-pokemon search value and push the button.
-o   The card display function uses map and an interpolated string to build the html tags.
-o   Name image and type are present, I also added the id# using padstart for values under 1000
+<li>   All different pokemon types are styled differently when the card populates</li>
+<li>   The button toggles disabled if the search term isn't in the options list.</li>
+<li>   The option list is populated with a different fetch endpoint, but uses the same function</li>
+<li>To see the fetch error: hide the create functions in script.js</li>
+<li>To see the http error: inspect the form, delete the disabled tag with no search value or a non-pokemon search value and push the button.</li>
+<li>The card display function uses map and an interpolated string to build the html tags.</li>
+<li>Name image and type are present, I also added the id# using padstart for values under 1000</li>
 
 
-    <br />
+    <br>
     <a href="https://github.com/Slim-Beatnik/ct-Module06-js-react-Assignment01-knowledgeCheck"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -110,33 +110,7 @@ o   Name image and type are present, I also added the id# using padstart for val
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `Slim-Beatnik`, `ct-Module06-js-react-Assignment01-knowledgeCheck`, `twitter_handle`, `3dkylehill`, `gmail`, `totem64`, `ct-Module06-js-react-Assignment01-knowledgeCheck`, `Instructions:
-1. 
-Create an input box where users can type the name or ID of a Pokémon.
-Add a button that triggers the search when clicked.
-Use the PokeAPI to fetch Pokémon data asynchronously.
-When the search is triggered, make an API request to retrieve the Pokémon's information.
-3. Display Data:
-Display the Pokémon's name and image on the page after fetching the data.
-Update the DOM dynamically based on the API response.
-4. Basic Error Handling:
-If the Pokémon is not found, display a simple error message.
-Bonus (Optional):
-Display the Pokémon's type (e.g., Fire, Water) along with its name and image.
-Technical Requirements:
-Use vanilla JavaScript (no frameworks).
-Fetch Pokémon data using the Fetch API or async/await.
-Dynamically update the DOM with the Pokémon data.
-Deliverables:
-A working web page that allows users to search for a Pokémon and displays its name and image.
-Evaluation Criteria:
-The app should successfully fetch and display Pokémon data.
-Clean and readable code.
-Simple, functional interface with appropriate feedback for invalid searches.
-Resources:
-https://pokeapi.co/
-https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function`, `knock yourself out`
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
